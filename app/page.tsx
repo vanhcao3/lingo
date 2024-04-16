@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div>
       <h1 className="text-green-500">Hello Lingo!</h1>
-      <Button variant={'destructive'}>Click me</Button>
     </div>
   );
 }
