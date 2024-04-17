@@ -5,7 +5,7 @@ export default function Home() {
   console.log('render children');
   return (
     <div>
-      <h1 className="text-green-500">Hello Lingo!</h1>
+      <h1 className="text-green-500">Hello Lino!</h1>
     </div>
   );
 }
