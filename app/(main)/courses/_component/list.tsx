@@ -2,6 +2,7 @@
 
 import { courses, userProgress } from '@/db/schema';
 import { Card } from './card';
+import { toast } from 'react-hot-toast';
 
 import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
@@ -24,7 +25,7 @@ export const List = ({ courses, activeCourseId }: Props) => {
     }
 
     startTransition(() => {
-      upsertUserProgress(id);
+      upsertUserProgress(id).catch(() => toast.error('Something went wrong!'));
     });
   };
 
