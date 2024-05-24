@@ -9,7 +9,6 @@ import {
   lessons,
   challengeProgress,
 } from './schema';
-import { access } from 'fs';
 
 export const getUserProgress = cache(async () => {
   const { userId } = await auth();
