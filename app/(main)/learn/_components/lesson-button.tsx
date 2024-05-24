@@ -40,7 +40,7 @@ export const LessonButton = ({
     indentationLevel = cycleIndex - 8;
   }
 
-  const rightPosition = indentationLevel * 60;
+  const rightPosition = indentationLevel * 40;
 
   const isFirst = index === 0;
   const isLast = index === totalCount;
@@ -98,7 +98,7 @@ export const LessonButton = ({
             </CircularProgressbarWithChildren>
           </div>
         ) : (
-            <Button
+          <Button
             size="rounded"
             variant={locked ? 'locked' : 'secondary'}
             className="h-[70px] w-[70px] border-b-8"
