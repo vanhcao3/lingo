@@ -6,10 +6,14 @@ import { useExitModal } from '@/store/use-exit-modal';
 type Props = {
   hearts: number;
   percentage: number;
-  hasActiveSubcription: boolean;
+  hasActiveSubscription: boolean;
 };
 
-export const Header = ({ hearts, percentage, hasActiveSubcription }: Props) => {
+export const Header = ({
+  hearts,
+  percentage,
+  hasActiveSubscription,
+}: Props) => {
   const { open } = useExitModal();
 
   return (
@@ -27,7 +31,7 @@ export const Header = ({ hearts, percentage, hasActiveSubcription }: Props) => {
           alt="Heart"
           className="mr-2"
         />
-        {hasActiveSubcription ? (
+        {hasActiveSubscription ? (
           <InfinityIcon className="h-6 w-6 stroke-[3]" />
         ) : (
           hearts
